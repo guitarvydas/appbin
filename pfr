@@ -8,8 +8,8 @@ catch () {
 }
 
 # usage: pf source-file grammar-file rewrite-file
-pdir=/app/pfr
+pfrdir=/app/pfr
 support=`realpath $4`
 tflag=$5
 vflag=$6
-docker run util pfr $1 $2 $3 $support $tflga $vflag
+node ${pfrdir}/parse.js $1 $2 $3 $support $tflag $vflag
